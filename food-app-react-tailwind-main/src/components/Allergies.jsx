@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 
 function Allergies() {
@@ -14,16 +14,26 @@ export default Allergies;
 
 function ParentComponent() {
   const [Allergies, setAllergies] = useState([]);
-  const [tagSuggestions, setTagSuggestions] = useState([
-    "Eggs",
-    "Milk",
-    "Mustard",
-    "Peanuts",
-    "Soy",
-    "Fish",
-  ]);
+  const [tagSuggestions, setTagSuggestions] = useState([]);
+  useEffect(() => {
+    fun()
+  }, [])
+  let fun = async () => {
+    let response = await fetch(`http://127.0.0.1:8000/app/allergies/`)
+    let data = await response.json()
+    console.log(data)
+    // {data.map((k)=>{
+    //   console.log(k)
+    //    setTagSuggestions([...tagSuggestions,k.name])
+    //    console.log(tagSuggestions)
+    // })}
+    setTagSuggestions([...tagSuggestions, ...data])
 
+  }
+
+  console.log(tagSuggestions)
   const addAllergies = (newAllergies) => {
+
     setAllergies([...Allergies, newAllergies]);
   };
 
@@ -39,22 +49,22 @@ function ParentComponent() {
         addAllergies={addAllergies}
         tagSuggestions={tagSuggestions}
       />
-     <div className="flex flex-wrap mt-4">
-  {Allergies.map((Allergies, index) => (
-    <div
-      key={index}
-      className="bg-gray-200 text-black p-2 rounded-lg m-2 flex items-center"
-    >
-      <span className="mr-2">{Allergies}</span>
-      <button
-        onClick={() => removeAllergies(index)}
-        className="p-2 text-red-500 focus:outline-none"
-      >
-        ❌
-      </button>
-    </div>
-  ))}
-</div>
+      <div className="flex flex-wrap mt-4">
+        {Allergies.map((Allergies, index) => (
+          <div
+            key={index}
+            className="bg-gray-200 text-black p-2 rounded-lg m-2 flex items-center"
+          >
+            <span className="mr-2">{Allergies}</span>
+            <button
+              onClick={() => removeAllergies(index)}
+              className="p-2 text-red-500 focus:outline-none"
+            >
+              ❌
+            </button>
+          </div>
+        ))}
+      </div>
 
     </div>
   );
@@ -63,13 +73,18 @@ function ParentComponent() {
 function AllergiesInput({ addAllergies, tagSuggestions }) {
   const [inputValue, setInputValue] = useState("");
   const [matchingTags, setMatchingTags] = useState([]);
-
+  console.log(tagSuggestions)
   const handleInputChange = (value) => {
     setInputValue(value);
     // Filter tag suggestions based on input value
+    tagSuggestions.map(k => {
+      console.log(typeof k)
+    })
     const filteredTags = tagSuggestions.filter((tag) =>
-      tag.toLowerCase().includes(value.toLowerCase())
+      tag.name.toLowerCase().includes(value.toLowerCase())
     );
+
+    console.log(filteredTags)
     setMatchingTags(filteredTags);
   };
 
@@ -102,10 +117,10 @@ function AllergiesInput({ addAllergies, tagSuggestions }) {
           {matchingTags.map((tag, index) => (
             <li
               key={index}
-              onClick={() => handleSuggestionClick(tag)}
+              onClick={() => handleSuggestionClick(tag.name)}
               className="cursor-pointer hover:bg-slate-500 hover:rounded-lg px-3 py-2 bg-gray-800"
             >
-              {tag}
+            {tag.name}
             </li>
           ))}
         </ul>
