@@ -14,6 +14,7 @@ import RiveComponent from "@rive-app/canvas";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [name,setname] = useState('');
   return (
     <>
       <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
@@ -39,6 +40,7 @@ const Navbar = () => {
           />
         </div>
         {/* Cart button */}
+         
         <button className="bg-black text-white hidden md:flex items-center py-2 rounded-full">
           <Link to="/signin">
           {/* <CgProfile size={25} className="mr-4" /> */}
