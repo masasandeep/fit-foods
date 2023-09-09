@@ -5,6 +5,7 @@ import {
   AiOutlineClose,
   AiFillTag,
 } from "react-icons/ai";
+import SearchBar from '../components/SearchBar';
 import { CgProfile } from "react-icons/cg";
 import { FaAllergies } from "react-icons/fa";
 import { IoDocuments } from "react-icons/io5";
@@ -50,14 +51,15 @@ const Navbar = () => {
         </div>
 
         {/* Search Input */}
-        <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
-          <AiOutlineSearch size={25} />
-          <input
+        {/* <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]"> */}
+          
+          {/* <input
             className="bg-transparent p-2 w-full focus:outline-none"
             type="text"
             placeholder="Search foods"
-          />
-        </div>
+          /> */}
+          <SearchBar/>
+        {/* </div> */}
         {/* Cart button */}
          
         <button className="bg-black text-white hidden md:flex items-center py-2 rounded-full">
