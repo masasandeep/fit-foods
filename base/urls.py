@@ -12,4 +12,6 @@ urlpatterns = [
     path('login/', UserLogin.as_view(), name='user-login'),
      path('token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('allergies/',Allergy.as_view(),name="allergy_names"),
+    path('health/',Health.as_view(),name="health_issues")
 ]

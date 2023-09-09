@@ -7,7 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'username', 'password', 'email','first_name', 'last_name')
+        fields = ('id', 'username', 'password', 'email','first_name','last_name')
 
     def create(self, validated_data):
         user = User.objects.create(
@@ -23,4 +23,14 @@ class UserSerializer(serializers.ModelSerializer):
 class GetSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
+        fields = '__all__'
+    
+class AllergySerializer(serializers.ModelSerializer):
+    class Meta:
+        model  = Allergies
+        fields = '__all__'
+        
+class HealthSerializer(serializers.ModelSerializer):
+    class Meta:
+        model  = HealthIssue
         fields = '__all__'

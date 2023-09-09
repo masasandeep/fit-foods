@@ -28,6 +28,12 @@ const Navbar = () => {
   
   const [nav, setNav] = useState(false);
   const [name,setname] = useState('');
+  useEffect(()=>{
+    const name = localStorage.getItem('username')
+    if(name){
+      setname(name);
+    }
+  },[])
   return (
     <>
       
