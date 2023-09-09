@@ -67,7 +67,6 @@ class Display(APIView):
         user = User.objects.all()
         serial = GetSerializer(user,many=True)
         return Response(serial.data)
-<<<<<<< HEAD
     
     
 class Allergy(APIView):
@@ -81,27 +80,3 @@ class Health(APIView):
         data = HealthIssue.objects.all()
         serializer = HealthSerializer(data,many=True)
         return Response(serializer.data)
-=======
-# Django views.py
-@api_view(['PUT'])
-@permission_classes([IsAuthenticated])
-def update_username(request):
-    new_username = request.data.get('new_username')
-    if new_username:
-        request.user.username = new_username
-        request.user.save()
-        return Response({'message': 'Username updated successfully'}, status=status.HTTP_200_OK)
-    else:
-        return Response({'error': 'New username is required'}, status=status.HTTP_400_BAD_REQUEST)
-
-@api_view(['POST'])
-@permission_classes([IsAuthenticated])
-def update_password(request):
-    new_password = request.data.get('new_password')
-    if new_password:
-        request.user.set_password(new_password)
-        request.user.save()
-        return Response({'message': 'Password updated successfully'}, status=status.HTTP_200_OK)
-    else:
-        return Response({'error': 'New password is required'}, status=status.HTTP_400_BAD_REQUEST)
->>>>>>> 49dacee1cad9628a627846766e23c4499d847afd
