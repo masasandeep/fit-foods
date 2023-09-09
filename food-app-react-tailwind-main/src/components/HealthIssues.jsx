@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from "./Navbar";
 
 function HealthIssues() {
@@ -14,12 +14,17 @@ export default HealthIssues;
 
 function ParentComponent() {
   const [healthIssues, setHealthIssues] = useState([]);
-  const [tagSuggestions, setTagSuggestions] = useState([
-    "Daibeties Type-1",
-    "Diabeties Type-2",
-    "Blood Pressue",
-    "Cholestrol",
-  ]);
+  const [tagSuggestions, setTagSuggestions] = useState([]);
+  useEffect(()=>{
+    fun()
+  },[])
+  let fun = async ()=>{
+    let response = await fetch(`http://127.0.0.1:8000/app/health/`)
+    let data = await response.json()
+    setTagSuggestions([...tagSuggestions,...data])
+   
+  }
+  console.log(tagSuggestions)
 
   const addHealthIssue = (newHealthIssue) => {
     setHealthIssues([...healthIssues, newHealthIssue]);
@@ -66,7 +71,7 @@ function HealthIssueInput({ addHealthIssue, tagSuggestions }) {
     setInputValue(value);
     // Filter tag suggestions based on input value
     const filteredTags = tagSuggestions.filter((tag) =>
-      tag.toLowerCase().includes(value.toLowerCase())
+      tag.name.toLowerCase().includes(value.toLowerCase())
     );
     setMatchingTags(filteredTags);
   };
@@ -100,10 +105,11 @@ function HealthIssueInput({ addHealthIssue, tagSuggestions }) {
           {matchingTags.map((tag, index) => (
             <li
               key={index}
-              onClick={() => handleSuggestionClick(tag)}
+              onClick={() => handleSuggestionClick(tag.name)}
               className="cursor-pointer hover:bg-slate-500 hover:rounded-lg px-3 py-2 bg-gray-800"
             >
-              {tag}
+            <p>{tag.name}</p>
+              
             </li>
           ))}
         </ul>

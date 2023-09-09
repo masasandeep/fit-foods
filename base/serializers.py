@@ -29,3 +29,8 @@ class AllergySerializer(serializers.ModelSerializer):
     class Meta:
         model  = Allergies
         fields = '__all__'
+        
+class HealthSerializer(serializers.ModelSerializer):
+    class Meta:
+        model  = HealthIssue
+        fields = '__all__'
