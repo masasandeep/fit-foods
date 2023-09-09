@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
-=======
-import React, { useState,useEffect } from "react";
->>>>>>> b27a18d08c55d2c9779c925b23b0f74ba5e96cf6
 import {
   AiOutlineMenu,
   AiOutlineSearch,
