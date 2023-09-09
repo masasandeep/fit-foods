@@ -30,13 +30,13 @@ function ParentComponent() {
     setTagSuggestions([...tagSuggestions, ...data])
 
   }
-
-  console.log(tagSuggestions)
+  // localStorage.setItem('allergies',JSON.stringify(tagSuggestions))
+  // localStorage.removeItem('allergies')
+  // console.log(tagSuggestions)
   const addAllergies = (newAllergies) => {
-
     setAllergies([...Allergies, newAllergies]);
   };
-
+  let k = localStorage.setItem('allergies',JSON.stringify(Allergies))
   const removeAllergies = (index) => {
     const updatedAllergies = Allergies.filter((_, i) => i !== index);
     setAllergies(updatedAllergies);

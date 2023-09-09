@@ -23,12 +23,12 @@ function ParentComponent() {
     setTagSuggestions([...tagSuggestions,...data])
    
   }
-  //console.log(tagSuggestions)
 
   const addHealthIssue = (newHealthIssue) => {
     setHealthIssues([...healthIssues,newHealthIssue]);
     console.log(healthIssues)
   };
+
   localStorage.setItem('health',JSON.stringify(healthIssues))
   console.log(localStorage.getItem('health'))
   const removeHealthIssue = (index) => {
