@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
+=======
+import React, { useState,useEffect } from "react";
+>>>>>>> b27a18d08c55d2c9779c925b23b0f74ba5e96cf6
 import {
   AiOutlineMenu,
   AiOutlineSearch,
@@ -26,6 +30,12 @@ const Navbar = () => {
   
   const [nav, setNav] = useState(false);
   const [name,setname] = useState('');
+  useEffect(()=>{
+    const name = localStorage.getItem('username')
+    if(name){
+      setname(name);
+    }
+  },[])
   return (
     <>
       
