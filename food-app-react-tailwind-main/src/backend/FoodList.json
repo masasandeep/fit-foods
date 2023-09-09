@@ -4,13 +4,8 @@
             "id": 1,
             "name": "Badam",
             "category": "Dry Fruits",
-            "image": "https://5.imimg.com/data5/KN/CA/MY-42464643/fresh-badam.jpg",
-            "nutrition":{
-                "calories": 105,
-                "carbohydrates": 27,
-                "fat": 0.3,
-                "protein": 1.3
-            }
+            "image": "https://5.imimg.com/data5/KN/CA/MY-42464643/fresh-badam.jpg"
+        
         },
         {
             "id": 2,

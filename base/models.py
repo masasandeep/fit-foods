@@ -21,6 +21,5 @@ class User(AbstractUser):
     health_issues = models.ManyToManyField(HealthIssue, related_name='users_with_health_issues', blank=True)
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
-
     def __str__(self):
         return self.username
