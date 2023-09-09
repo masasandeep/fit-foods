@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import {
   AiOutlineMenu,
   AiOutlineSearch,
@@ -15,6 +15,12 @@ import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [name,setname] = useState('');
+  useEffect(()=>{
+    const name = localStorage.getItem('username')
+    if(name){
+      setname(name);
+    }
+  },[])
   return (
     <>
       <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
