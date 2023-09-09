@@ -8,10 +8,6 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState(""); // Changed variable name
   const [lastName, setLastName] = useState(""); // Changed variable name
-  useEffect(() => {
-    handleSignup();
-  }, []);
-
   let handleSignup = async () => {
     const response = await fetch(`http://127.0.0.1:8000/app/signup/`, {
       method: "POST",
