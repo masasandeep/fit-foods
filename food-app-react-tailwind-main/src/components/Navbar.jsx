@@ -10,6 +10,7 @@ import { FaAllergies } from "react-icons/fa";
 import { IoDocuments } from "react-icons/io5";
 import {CgWebsite} from "react-icons/cg";
 import { MdFavorite, MdHelp } from "react-icons/md";
+import FoodDisplay from './FoodCard'
 import RiveComponent from "@rive-app/canvas";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 const Navbar = () => {
@@ -64,7 +65,7 @@ const Navbar = () => {
           <CgProfile size={20} className="mr-4" />
           {user?
           user
-          :'profile'}
+          :'Login'}
           {/* Animationan */}
           </Link>
         </button>
@@ -113,6 +114,10 @@ const Navbar = () => {
               <li className="text-xl py-4 flex">
                 <CgWebsite size={25} className="mr-4" />
                 <Link to="/blogs"> Food Blogs</Link>
+              </li>
+              <li className="text-xl py-4 flex">
+                <CgWebsite size={25} className="mr-4" />
+                <Link to="/FoodDisplay">Log out</Link>
               </li>
               {/* <li className='text-xl py-4 flex'><AiFillTag size={25} className='mr-4' /> Promotions</li>
                 <li className='text-xl py-4 flex'><BsFillSaveFill size={25} className='mr-4' /> Best Ones</li>

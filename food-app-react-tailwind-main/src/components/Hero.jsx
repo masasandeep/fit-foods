@@ -1,28 +1,8 @@
 import React from "react";
 import { Carousel } from "react-carousel-minimal";
+import BlogsData from '../backend/BlogsData.json';
 const Hero = () => {
-  const data = [
-    {
-      image:
-        "https://influencermarketinghub.com/wp-content/uploads/2018/06/Two-peas-and-their-pod.jpg",
-      caption: "Two Peas and thier Pod",
-    },
-    {
-      image:
-        "https://www.blogtyrant.com/wp-content/uploads/2022/05/rsz_pinch-of-yum-food-blog.png",
-      caption: "Pinch of Yum",
-    },
-    {
-      image:
-        "https://www.chefspencil.com/wp-content/uploads/Food52.jpg",
-      caption: "FOOD52",
-    },
-    {
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNfyBY4WgYQ4JN5XputB85RtMKLzg4jffPG6EKF8M6gf_6a7-z-TDDr7zvGmJQ8JIFt_Q&usqp=CAU",
-      caption: "Minimalist Baker",
-    },
-  ];
+ const data=BlogsData.data;
 
   const captionStyle = {
     fontSize: "2em",

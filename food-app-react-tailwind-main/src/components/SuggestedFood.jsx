@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { data } from "../data/data.js";
+import FoodList from '../backend/FoodList.json';
 
 const SuggestedFood = () => {
   //   console.log(data);
+  const {data}=FoodList;
   const [foods, setFoods] = useState(data);
 
   //   Filter Type burgers/pizza/etc
@@ -45,6 +47,7 @@ const SuggestedFood = () => {
 };
 
 function Consumable() {
+  const {data}=FoodList;
   const [foods, setFoods] = useState(data);
 
   return (
@@ -74,11 +77,12 @@ function Consumable() {
 }
 
 function NonConsumable() {
+  const {data}=FoodList;
   const [foods, setFoods] = useState(data);
 
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-      {foods.slice(0, 4).map((item, index) => (
+      {foods.slice(6, 10).map((item, index) => (
         <div
           key={index}
           className="border shadow-lg rounded-lg hover:scale-105 duration-300"
