@@ -25,6 +25,7 @@ const Navbar = () => {
   },[])
   
   const [nav, setNav] = useState(false);
+  const [name,setname] = useState('');
   return (
     <>
       
@@ -51,6 +52,7 @@ const Navbar = () => {
           />
         </div>
         {/* Cart button */}
+         
         <button className="bg-black text-white hidden md:flex items-center py-2 rounded-full">
           <Link to="/signin">
           <CgProfile size={20} className="mr-4" />
