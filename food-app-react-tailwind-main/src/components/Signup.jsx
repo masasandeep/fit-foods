@@ -8,12 +8,9 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState(""); // Changed variable name
   const [lastName, setLastName] = useState(""); // Changed variable name
-  useEffect(() => {
-    handleSignup();
-  }, []);
-
+  
   let handleSignup = async () => {
-    const response = await fetch(`http://127.0.0.1:8000/app/signup/`, {
+    const response = await fetch(`/app/signup/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +27,7 @@ function Signup() {
     if (response.ok) {
       
       console.log("Successfully signed up");
-      navigate("/signup");
+      navigate("/login");
     }
     else{
       alert("inavlid credentials");

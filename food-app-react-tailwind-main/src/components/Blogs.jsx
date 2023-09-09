@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Navbar from './Navbar'
+import HeadlineCards from './HeadlineCards';
 
 function Blogs() {
   return (
     <div>
-    <Navbar/>Blogs</div>
+    <Navbar/>
+    <HeadlineCards/>
+    </div>
   )
 }
 
 export default Blogs
+
+
+
+

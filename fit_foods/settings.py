@@ -104,7 +104,6 @@ REST_FRAMEWORK = {
 
 
 ROOT_URLCONF = 'fit_foods.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -178,4 +177,3 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'food-app-react-tailwind-main/build/s
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
-# AUTHENTICATION_BACKENDS = ['fit_foods.backends.EmailBackend']

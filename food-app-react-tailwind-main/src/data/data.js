@@ -132,49 +132,49 @@ export const data = [
   export const categories = [
     {
       id: 1,
-      name: 'Fast Food',
+      name: 'Drinks',
       image:
-        'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/FastFood_BrowseHome@3x.png',
+        'C:\Users\hp\OneDrive\Desktop\food-app-react-tailwind-main\food-app-react-tailwind-main\Images\orange-juice.png',
     },
     {
       id: 2,
-      name: 'Pizza',
+      name: 'Fruits',
       image:
         'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Pizza_BrowseHome@3x.png',
     },
     {
       id: 3,
-      name: 'Wings',
+      name: 'Vegetables',
       image:
         'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Wings_BrowseHome@3x.png',
     },
     {
       id: 4,
-      name: 'Indian',
+      name: 'Grains',
       image:
         'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Indian_BrowseHome@3x.png',
     },
     {
       id: 5,
-      name: 'Latest Deals',
+      name: 'Meat',
       image:
         'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Deals_BrowseHome@3x.png',
     },
     {
       id: 6,
-      name: 'Restaurant Rewards',
+      name: 'Snacks',
       image:
         'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/RestoRewards_BrowseHome@3x.png',
     },
     {
       id: 7,
-      name: 'Best Overall',
+      name: 'Deserts',
       image:
         'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/TopEats_Browse%20Home@3x.png',
     },
     {
       id: 8,
-      name: 'Shipped Free',
+      name: 'Beverage',
       image:
         'https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Placeholder_Plates@3x.png',
     },
