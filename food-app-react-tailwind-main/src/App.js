@@ -8,6 +8,7 @@ import UserProfile from "./components/UserProfile";
 import Blogs from "./components/Blogs";
 import SignIn from "./components/SignIn"
 import SignUp from "./components/Signup"
+import FoodDisplay from './components/FoodDisplay'
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/allergies" element={<Allergies/>} />
           <Route path="/document" element={<Document />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/FoodDisplay" element={<FoodDisplay />} />
         </Routes>
       </BrowserRouter>
     </>

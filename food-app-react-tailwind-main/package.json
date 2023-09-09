@@ -4,10 +4,13 @@
   "proxy": "http://127.0.0.1:8000",
   "private": true,
   "dependencies": {
+    "@mdi/js": "^7.2.96",
+    "@mdi/react": "^1.6.1",
     "@rive-app/react-canvas": "^4.1.4",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "axios": "^1.5.0",
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-carousel-minimal": "^1.4.1",

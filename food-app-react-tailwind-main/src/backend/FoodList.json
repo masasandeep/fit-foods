@@ -1,0 +1,100 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Badam",
+            "category": "Dry Fruits",
+            "image": "https://5.imimg.com/data5/KN/CA/MY-42464643/fresh-badam.jpg",
+            "nutrition":{
+                "calories": 105,
+                "carbohydrates": 27,
+                "fat": 0.3,
+                "protein": 1.3
+            }
+        },
+        {
+            "id": 2,
+            "name": "Dates",
+            "category": "Dry Fruits",
+            "image": "https://th.bing.com/th/id/OIP.3u7HOPixGogiNuKPzyfj6gHaE8?w=291&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+            "id": 3,
+            "name": "Cashews",
+            "category": "Dry Fruits",
+            "image": "https://th.bing.com/th/id/OIP.oi3Z0b4tAnPAyGDwUelT9wHaET?w=313&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+            "id": 4,
+            "name": "Walnut",
+            "category": "Dry Fruits",
+            "image": "https://th.bing.com/th/id/OIP.6XqPLi87vz2qqp6mzpfKmwHaE7?w=270&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+            "id": 5,
+            "name": "Pistachios",
+            "category": "Dry Fruits",
+            "image":"https://th.bing.com/th/id/OIP.yEyCKjXLnMIr1mgBxuUe-wHaFM?pid=ImgDet&rs=1"
+        },
+        {
+            "id": 6,
+            "name": "Burger",
+            "category": "Fast Food",
+            "image": "https://th.bing.com/th/id/OIP.pGxT5I5E9bEjsYbyDBTo8QHaEu?w=280&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+            "id": 7,
+            "name": "Pizza",
+            "category": "Fast Food",
+            "image": "https://th.bing.com/th/id/OIP.MfhIfzrC6x6T1-szQkjtCgHaEo?w=291&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        },
+        {
+            "id": 8,
+            "name": "Hotdog",
+            "category": "Fast Food",
+            "image": "https://images.pexels.com/photos/1234537/pexels-photo-1234537.jpeg"
+        },
+        {
+            "id": 9,
+            "name": "Taco",
+            "category": "Fast Food",
+            "image": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
+        },
+        {
+            "id": 10,
+            "name": "Sushi",
+            "category": "Japanese",
+            "image": "https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg"
+        },
+        {
+            "id": 11,
+            "name": "Tempura",
+            "category": "Japanese",
+            "image": "https://images.pexels.com/photos/1159337/pexels-photo-1159337.jpeg"
+        },
+        {
+            "id": 12,
+            "name": "Ramen",
+            "category": "Japanese",
+            "image": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg"
+        },
+        {
+            "id": 13,
+            "name": "Sashimi",
+            "category": "Japanese",
+            "image": "https://images.pexels.com/photos/876373/pexels-photo-876373.jpeg"
+        },
+        {
+            "id": 14,
+            "name": "Salad",
+            "category": "Healthy",
+            "image": "https://images.pexels.com/photos/1391487/pexels-photo-1391487.jpeg"
+        },
+        {
+            "id": 15,
+            "name": "Smoothie",
+            "category": "Healthy",
+            "image": "https://th.bing.com/th/id/OIP.IYTVg83QlcEMAWZyh26EggHaLH?w=202&h=303&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+        }
+    ]
+}

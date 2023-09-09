@@ -1,25 +1,12 @@
 import React, { useState } from "react";
 
 const UserProfileCard = () => {
-  const [userId, setUserId] = useState("user123");
-  const [password, setPassword] = useState("password123");
-  const [firstName, setFirstName] = useState("John");
-  const [lastName, setLastName] = useState("Doe");
-  const [email, setEmail] = useState("john@example.com");
-  const [address, setAddress] = useState("Chatakpur-3, Dhangadhi Kailali");
-  const [newImage, setNewImage] = useState("");
+  const [userId, setUserId] = useState();
+  const [password, setPassword] = useState();
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
   const [editMode, setEditMode] = useState(false);
-
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setNewImage(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  const [email, setEmail] = useState();
 
   const handleSaveChanges = () => {
     // Logic to save changes to the user's profile
@@ -30,24 +17,6 @@ const UserProfileCard = () => {
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-black to-gray-800">
     <div className="max-w-md w-full mx-4">
       <div className="bg-white shadow-lg rounded-lg p-6">
-        <div className="photo-wrapper mb-4 text-center">
-            {/* <img
-              className="w-40 h-40 rounded-full mx-auto"
-              src={
-                newImage ||
-                "https://www.gravatar.com/avatar/2acfb745ecf9d4dccb3364752d17f65f?s=260&d=mp"
-              }
-              alt="John Doe"
-            /> */}
-            {editMode && (
-              <input
-                type="file"
-                accept=".jpg"
-                onChange={handleImageUpload}
-                className="mt-2 block w-full focus:outline-none"
-              />
-            )}
-          </div>
           <div className="p-2">
             {editMode ? (
               <div className="mb-2">
@@ -93,6 +62,7 @@ const UserProfileCard = () => {
             )}
             {editMode ? (
               <div className="mb-2">
+                
                 <label htmlFor="lastName">Last Name:</label>
                 <input
                   type="text"
@@ -119,7 +89,7 @@ const UserProfileCard = () => {
             ) : (
               <div>Email: {email}</div>
             )}
-            {editMode ? (
+            {/* {editMode ? (
               <div className="mb-2">
                 <label htmlFor="address">Address:</label>
                 <input
@@ -132,7 +102,7 @@ const UserProfileCard = () => {
               </div>
             ) : (
               <div>Address: {address}</div>
-            )}
+            )} */}
 
             <div className="text-center my-3">
               {editMode ? (
