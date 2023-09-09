@@ -5,8 +5,13 @@ from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.views import APIView
-from .serializers import UserSerializer,GetSerializer
+<<<<<<< HEAD
+from .serializers import UserSerializer,GetSerializer,AllergySerializer,HealthSerializer
 from rest_framework.decorators import api_view
+=======
+from .serializers import UserSerializer,GetSerializer
+from rest_framework.decorators import api_view, permission_classes
+>>>>>>> 49dacee1cad9628a627846766e23c4499d847afd
 from django.contrib.auth import authenticate
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
@@ -62,3 +67,16 @@ class Display(APIView):
         user = User.objects.all()
         serial = GetSerializer(user,many=True)
         return Response(serial.data)
+    
+    
+class Allergy(APIView):
+    def get(self,request):
+        data = Allergies.objects.all()
+        serializer = AllergySerializer(data,many=True)
+        return Response(serializer.data)
+    
+class Health(APIView):
+    def get(self,request):
+        data = HealthIssue.objects.all()
+        serializer = HealthSerializer(data,many=True)
+        return Response(serializer.data)
