@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import jwt_decode from "jwt-decode";
 function SignIn() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -17,6 +18,7 @@ function SignIn() {
     if (response.ok) {
       const data = await response.json();
       localStorage.setItem("token", data.access);
+      console.log('huy',jwt_decode(data.access))
       navigate("/");
       // Redirect or do something after successful login
     } else {
