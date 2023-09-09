@@ -7,12 +7,15 @@ const UserProfileCard = () => {
   const [lastName, setLastName] = useState();
   const [editMode, setEditMode] = useState(false);
   const [email, setEmail] = useState();
-
+  const [lc,slc] = useState([])
   const handleSaveChanges = () => {
     // Logic to save changes to the user's profile
     setEditMode(false);
   };
-
+  slc(localStorage.getItem('health'))
+  lc.map(t =>{
+    console.log(t)
+  })
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-black to-gray-800">
     <div className="max-w-md w-full mx-4">
@@ -22,7 +25,7 @@ const UserProfileCard = () => {
               <div className="mb-2">
                 <label htmlFor="userId">User ID:</label>
                 <input
-                  type="text"
+                  type="text" 
                   id="userId"
                   value={userId}
                   onChange={(e) => setUserId(e.target.value)}

@@ -14,6 +14,7 @@ export default HealthIssues;
 function ParentComponent() {
   const [healthIssues, setHealthIssues] = useState([]);
   const [tagSuggestions, setTagSuggestions] = useState([]);
+
   useEffect(()=>{
     fun()
   },[])
@@ -30,7 +31,7 @@ function ParentComponent() {
   };
 
   localStorage.setItem('health',JSON.stringify(healthIssues))
-  console.log(localStorage.getItem('health'))
+  let k = localStorage.getItem('health')
   const removeHealthIssue = (index) => {
     const updatedHealthIssues = healthIssues.filter((_, i) => i !== index);
     setHealthIssues(updatedHealthIssues);
