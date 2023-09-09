@@ -4,13 +4,18 @@
   "proxy": "http://127.0.0.1:8000",
   "private": true,
   "dependencies": {
+    "@emotion/styled": "^11.11.0",
     "@mdi/js": "^7.2.96",
     "@mdi/react": "^1.6.1",
+    "@mui/icons-material": "^5.14.8",
+    "@mui/material": "^5.14.8",
+    "@mui/styles": "^5.14.7",
     "@rive-app/react-canvas": "^4.1.4",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "axios": "^1.5.0",
+    "caniuse-lite": "^1.0.30001532",
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-carousel-minimal": "^1.4.1",
@@ -18,7 +23,9 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
+    "react-select": "^5.7.4",
     "rive-react": "^4.1.4",
+    "styled-components": "^6.0.7",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
