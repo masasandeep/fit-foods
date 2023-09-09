@@ -8,6 +8,7 @@ import {
 import { CgProfile } from "react-icons/cg";
 import { FaAllergies } from "react-icons/fa";
 import { IoDocuments } from "react-icons/io5";
+import {CgWebsite} from "react-icons/cg";
 import { MdFavorite, MdHelp } from "react-icons/md";
 import RiveComponent from "@rive-app/canvas";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
@@ -22,9 +23,9 @@ const Navbar = () => {
             <AiOutlineMenu size={30} />
           </div>
           <Link to="/">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
-            FIT <span className="font-bold">FOODS</span>
-          </h1>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
+              FIT <span className="font-bold">FOODS</span>
+            </h1>
           </Link>
         </div>
 
@@ -39,8 +40,8 @@ const Navbar = () => {
         </div>
         {/* Cart button */}
         <button className="bg-black text-white hidden md:flex items-center py-2 rounded-full">
-          {/* <CgProfile size={25} className="mr-4" /> */}
-          
+          <CgProfile size={25} className="mr-4" />
+          Logout
           {/* Animationan */}
         </button>
         {/* Mobile Menu */}
@@ -70,7 +71,7 @@ const Navbar = () => {
           <nav>
             <ul className="flex flex-col p-4 text-gray-800">
               <li className="text-xl py-4 flex">
-                <CgProfile size={25} className="mr-4" /> 
+                <CgProfile size={25} className="mr-4" />
                 <Link to="/userprofile">User Details</Link>
               </li>
               <li className="text-xl py-4 flex">
@@ -83,11 +84,11 @@ const Navbar = () => {
               </li>
               <li className="text-xl py-4 flex">
                 <IoDocuments size={25} className="mr-4" />
-               <Link to="/document"> Upload Documents </Link>
+                <Link to="/document"> Upload Documents </Link>
               </li>
               <li className="text-xl py-4 flex">
-                <IoDocuments size={25} className="mr-4" />
-               <Link to="/blogs"> Food Blogs</Link>
+                <CgWebsite size={25} className="mr-4" />
+                <Link to="/blogs"> Food Blogs</Link>
               </li>
               {/* <li className='text-xl py-4 flex'><AiFillTag size={25} className='mr-4' /> Promotions</li>
                 <li className='text-xl py-4 flex'><BsFillSaveFill size={25} className='mr-4' /> Best Ones</li>

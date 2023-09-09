@@ -1,13 +1,13 @@
-import React from "react";
-import Navbar from "./Navbar";
-
+import React from 'react'
+import Navbar from './Navbar'
+import CenteredCard from './CenteredCard'
 function UserProfile() {
   return (
     <div>
-      <Navbar />
-      
+    <Navbar/>
+    <CenteredCard/>
     </div>
-  );
+  )
 }
 
-export default UserProfile;
+export default UserProfile
