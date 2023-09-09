@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import Navbar from "./Navbar";
-
+import {useNavigate} from "react-router-dom";
 function HealthIssues() {
   return (
     <div>
@@ -9,7 +9,6 @@ function HealthIssues() {
     </div>
   );
 }
-
 export default HealthIssues;
 
 function ParentComponent() {
@@ -24,20 +23,23 @@ function ParentComponent() {
     setTagSuggestions([...tagSuggestions,...data])
    
   }
-  console.log(tagSuggestions)
+  //console.log(tagSuggestions)
 
   const addHealthIssue = (newHealthIssue) => {
-    setHealthIssues([...healthIssues, newHealthIssue]);
+    setHealthIssues([...healthIssues,newHealthIssue]);
+    console.log(healthIssues)
   };
-
+  localStorage.setItem('health',JSON.stringify(healthIssues))
+  console.log(localStorage.getItem('health'))
   const removeHealthIssue = (index) => {
     const updatedHealthIssues = healthIssues.filter((_, i) => i !== index);
     setHealthIssues(updatedHealthIssues);
   };
-
+ 
   return (
     <div className="container mx-auto p-4 text-white min-h-screen bg-gradient-to-r from-black to-gray-800">
       <h1 className="text-4xl mb-4">Select Health Issues</h1>
+  
       <HealthIssueInput
         addHealthIssue={addHealthIssue}
         tagSuggestions={tagSuggestions}
@@ -90,7 +92,7 @@ function HealthIssueInput({ addHealthIssue, tagSuggestions }) {
     setInputValue("");
     setMatchingTags([]);
   };
-
+  
   return (
     <div className="mb-4">
       <input
