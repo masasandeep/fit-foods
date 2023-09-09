@@ -16,7 +16,10 @@ function SignIn() {
 
     if (response.ok) {
       const data = await response.json();
+      localStorage.setItem("username", data.username);
       localStorage.setItem("token", data.access);
+      
+      console.log(data.username);
       navigate("/");
       // Redirect or do something after successful login
     } else {

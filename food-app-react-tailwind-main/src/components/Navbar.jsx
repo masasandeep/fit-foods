@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AiOutlineMenu,
   AiOutlineSearch,
@@ -13,9 +13,21 @@ import { MdFavorite, MdHelp } from "react-icons/md";
 import RiveComponent from "@rive-app/canvas";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 const Navbar = () => {
+  
+  const [user,setUser] = useState('')
+  useEffect(() =>{
+    const username = localStorage.getItem('username');
+    // console.log(username)
+    if(username){
+      setUser(username)
+    }
+    console.log({user})
+  },[])
+  
   const [nav, setNav] = useState(false);
   return (
     <>
+      
       <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
         {/* Left side */}
         <div className="flex items-center">
@@ -41,8 +53,10 @@ const Navbar = () => {
         {/* Cart button */}
         <button className="bg-black text-white hidden md:flex items-center py-2 rounded-full">
           <Link to="/signin">
-          {/* <CgProfile size={25} className="mr-4" /> */}
-          Login
+          <CgProfile size={20} className="mr-4" />
+          {user?
+          user
+          :'profile'}
           {/* Animationan */}
           </Link>
         </button>

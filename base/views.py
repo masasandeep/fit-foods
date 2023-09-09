@@ -31,6 +31,7 @@ class UserLogin(APIView):
         if user:
             refresh = RefreshToken.for_user(user)
             return Response({
+                "username": user.username,
                 "user_id": user.id,
                 "refresh": str(refresh),
                 "access": str(refresh.access_token)
