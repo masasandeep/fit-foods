@@ -1,8 +1,9 @@
 import React from 'react';
-
+import FoodList from '../backend/FoodList';
 const FoodCard = ({ food }) => {
   return (
-    <div className="bg-grey rounded-lg shadow-lg overflow-hidden py-20">
+    <div className="items-center">
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden py-20">
       <img
         src={food.image}
         alt={food.name}
@@ -17,6 +18,7 @@ const FoodCard = ({ food }) => {
           <p>Protein: {food.nutrition.protein}g</p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
