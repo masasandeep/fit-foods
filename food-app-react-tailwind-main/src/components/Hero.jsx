@@ -62,8 +62,8 @@ const Hero = () => {
                 dots={true}
                 pauseIconColor="white"
                 pauseIconSize="40px"
-                slideBackgroundColor="darkgrey"
-                slideImageFit="cover"
+                slideBackgroundColor="white"
+                slideImageFit="contain"
                 thumbnails={true}
                 thumbnailWidth="100px"
                 style={{

@@ -42,9 +42,11 @@ const Navbar = () => {
         {/* Cart button */}
          
         <button className="bg-black text-white hidden md:flex items-center py-2 rounded-full">
-          <CgProfile size={25} className="mr-4" />
-          Logout
+          <Link to="/signin">
+          {/* <CgProfile size={25} className="mr-4" /> */}
+          Login
           {/* Animationan */}
+          </Link>
         </button>
         {/* Mobile Menu */}
         {/* Overlay */}
