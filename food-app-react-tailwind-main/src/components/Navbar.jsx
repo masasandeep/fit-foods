@@ -117,10 +117,10 @@ const Navbar = () => {
                 <CgWebsite size={25} className="mr-4" />
                 <Link to="/blogs"> Food Blogs</Link>
               </li>
-              <li className="text-xl py-4 flex">
+              {/* <li className="text-xl py-4 flex">
                 <CgWebsite size={25} className="mr-4" />
                 <Link to="/FoodDisplay">Log out</Link>
-              </li>
+              </li> */}
               {/* <li className='text-xl py-4 flex'><AiFillTag size={25} className='mr-4' /> Promotions</li>
                 <li className='text-xl py-4 flex'><BsFillSaveFill size={25} className='mr-4' /> Best Ones</li>
                 <li className='text-xl py-4 flex'><FaUserFriends size={25} className='mr-4' /> Invite Friends</li> */}

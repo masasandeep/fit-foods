@@ -10,7 +10,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":true
         },
         {
             "id": 2,
@@ -22,7 +23,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":true
         },
         {
             "id": 3,
@@ -34,7 +36,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":true
         },
         {
             "id": 4,
@@ -46,7 +49,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":true
         },
         {
             "id": 5,
@@ -58,7 +62,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":true
         },
         {
             "id": 6,
@@ -70,7 +75,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":false
         },
         {
             "id": 7,
@@ -82,7 +88,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":false
         },
         {
             "id": 8,
@@ -94,7 +101,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":false
         },
         {
             "id": 9,
@@ -106,7 +114,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":false
         },
         {
             "id": 10,
@@ -118,7 +127,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":false
         },
         {
             "id": 11,
@@ -130,7 +140,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":false
         },
         {
             "id": 12,
@@ -142,7 +153,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":false
         },
         {
             "id": 13,
@@ -154,7 +166,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":false
         },
         {
             "id": 14,
@@ -166,7 +179,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":true
         },
         {
             "id": 15,
@@ -178,7 +192,8 @@
                 "carbohydrates": 27,
                 "fat": 0.3,
                 "protein": 1.3
-            }
+            },
+            "consumable":true
         }
     ]
 }

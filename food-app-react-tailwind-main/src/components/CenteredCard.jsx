@@ -24,13 +24,14 @@ const UserProfileCard = () => {
                 <input
                   type="text"
                   id="userId"
+                  placeholder="enter user id"
                   value={userId}
                   onChange={(e) => setUserId(e.target.value)}
                   className="w-full text-gray-700 border rounded px-2 py-1 focus:outline-none focus:border-indigo-500"
                 />
               </div>
             ) : (
-              <div>User ID: {userId}</div>
+              <div>User ID: {userId ? userId : "Enter User ID"}</div>
             )}
             {editMode ? (
               <div className="mb-2">
@@ -38,13 +39,14 @@ const UserProfileCard = () => {
                 <input
                   type="password"
                   id="password"
+                  placeholder="enter password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full text-gray-700 border rounded px-2 py-1 focus:outline-none focus:border-indigo-500"
                 />
               </div>
             ) : (
-              <div>Password: {password}</div>
+              <div>Password: {password ? password : "Enter Password"}</div>
             )}
             {editMode ? (
               <div className="mb-2">
@@ -53,12 +55,13 @@ const UserProfileCard = () => {
                   type="text"
                   id="firstName"
                   value={firstName}
+                  placeholder="enter first name"
                   onChange={(e) => setFirstName(e.target.value)}
                   className="w-full text-gray-700 border rounded px-2 py-1 focus:outline-none focus:border-indigo-500"
                 />
               </div>
             ) : (
-              <div>First Name: {firstName}</div>
+              <div>First Name: {firstName ? firstName : "Enter First Name"}</div>
             )}
             {editMode ? (
               <div className="mb-2">
@@ -67,13 +70,14 @@ const UserProfileCard = () => {
                 <input
                   type="text"
                   id="lastName"
+                  placeholder="enter last name"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                   className="w-full text-gray-700 border rounded px-2 py-1 focus:outline-none focus:border-indigo-500"
                 />
               </div>
             ) : (
-              <div>Last Name: {lastName}</div>
+              <div>Last Name: {lastName ? lastName : "Enter Last Name"}</div>
             )}
             {editMode ? (
               <div className="mb-2">
@@ -82,12 +86,13 @@ const UserProfileCard = () => {
                   type="email"
                   id="email"
                   value={email}
+                  placeholder="enter email"
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full text-gray-700 border rounded px-2 py-1 focus:outline-none focus:border-indigo-500"
                 />
               </div>
             ) : (
-              <div>Email: {email}</div>
+              <div>Email: {email ? email : "Enter email address"}</div>
             )}
             {/* {editMode ? (
               <div className="mb-2">

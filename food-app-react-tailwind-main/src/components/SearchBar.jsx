@@ -16,8 +16,8 @@ import { Button } from '@mui/material';
 import { Link,useNavigate } from 'react-router-dom';
 
 const suggestions = [
-    'Apple',
-    'Banana',
+    'Cashew',
+    'Badam',
     'Burger',
     'Pizza',
     'Dates',
@@ -47,19 +47,19 @@ function SearchBar() {
     const nav=useNavigate();
     const classes = useStyles();
     const [value, setValue] = useState('');
-    const [found,setFound]=useState(false);
+    const [found,setFound]=useState(true);
     const handleClick=()=>{
         
         FoodList.data.map((item1)=>{if(item1.name===value){
             // console.log(item1);
             // nav("/FoodDisplay");
             setFound(true);
-            nav('/FoodDisplay',{state:{item1:item1,found:found}});
+            nav('/FoodDisplay',{state:{item1:item1,found:true}});
         }
         else
         {
             setFound(false);
-            nav('/FoodDisplay',{state:{item1:item1,found:found}});
+            nav('/FoodDisplay',{state:{item1:item1,found:false}});
         }
     })
     }
