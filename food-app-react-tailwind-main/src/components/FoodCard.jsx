@@ -16,6 +16,7 @@ const FoodCard = ({ food }) => {
           <p>Carbohydrates: {food.nutrition.carbohydrates}g</p>
           <p>Fat: {food.nutrition.fat}g</p>
           <p>Protein: {food.nutrition.protein}g</p>
+          <p>Consumable:{food.consumable?"Good for you :)":"Not good for you :("}</p>
         </div>
       </div>
     </div>
