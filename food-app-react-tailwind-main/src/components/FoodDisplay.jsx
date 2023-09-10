@@ -8,7 +8,7 @@ function FoodData() {
   // Add more food items as needed
 
   const location = useLocation();
-
+  console.log(localStorage.getItem(('allergies')))
   return (
     <>
     <NavBar/>
@@ -17,7 +17,7 @@ function FoodData() {
         <div className="grid grid-cols-1 item-center py-10 px-10 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
           {/* {foods.map((food, index) => ( */}
-    </>
+   
           if(location.state.found)
           {
             <FoodCard food={location.state.item1} />
@@ -34,6 +34,7 @@ function FoodData() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
